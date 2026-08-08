@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "cone",
+  "version": "${version}",
+  "name": "Cone",
+  "description": "Skyblock market-data client.",
+  "icon": "assets/cone/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "net.cone.ConeClient"
+    ]
+  },
+  "mixins": [
+    "cone.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "fabric-api": "*",
+    "minecraft": "~26.1.2",
+    "java": ">=25"
+  }
+}
