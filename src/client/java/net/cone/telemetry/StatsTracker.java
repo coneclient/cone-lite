@@ -73,10 +73,6 @@ public final class StatsTracker implements TickBus.Listener {
         }
     }
 
-    /**
-     * Fold a remote copy into the local one, keeping the larger of each running total. Call it on
-     * the client thread. The stats stay a monotonic union, so no run ever loses time or a count.
-     */
     public void mergeRemote(long firstSeen, long failsafesTripped, long playtimeMs) {
         stats.firstSeen        = Math.min(stats.firstSeen, firstSeen);
         stats.failsafesTripped = Math.max(stats.failsafesTripped, failsafesTripped);
